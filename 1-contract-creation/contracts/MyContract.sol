@@ -3,7 +3,7 @@ pragma solidity ^0.4.21;
 contract MyContract {
   event Log(address addr);
 
-  function MyContract() public {
+  constructor() public {
     emit Log(address(this));
   }
 
