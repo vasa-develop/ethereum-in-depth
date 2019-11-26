@@ -1,11 +1,10 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.0;
 
-import './MyContract.sol';
+import {MyContract} from "./MyContract.sol";
 
 contract AnotherContract {
   MyContract public myContract;
-
-  function AnotherContract() public {
+  constructor() public {
     myContract = new MyContract();
   }
 }
