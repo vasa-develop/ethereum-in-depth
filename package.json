@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/facuspagnuolo/ethereum-in-depth.git"
+    "url": "git+https://github.com/vasa-develop/ethereum-in-depth.git"
   },
   "keywords": [
     "ethereum",
@@ -17,12 +17,15 @@
     "smartcontracts",
     "evm"
   ],
-  "author": "Facu Spagnuolo <facundo_spagnuolo@icloud.com>",
+  "contributors": [
+    "Facu Spagnuolo <facundo_spagnuolo@icloud.com>",
+    "Vaibhav Saini <vasa.develop@gmail.com>"
+  ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/facuspagnuolo/ethereum-in-depth/issues"
+    "url": "https://github.com/vasa-develop/ethereum-in-depth/issues"
   },
-  "homepage": "https://github.com/facuspagnuolo/ethereum-in-depth#readme",
+  "homepage": "https://github.com/vasa-develop/ethereum-in-depth#readme",
   "devDependencies": {
     "recursive-install": "^1.3.0"
   }
