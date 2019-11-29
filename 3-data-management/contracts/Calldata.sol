@@ -1,13 +1,13 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.11;
 
 contract Calldata {
   function add(uint256 _a, uint256 _b) public view returns (uint256 result) {
-    assembly {
-      let a := mload(0x40)
-      let b := add(a, 32)
-      calldatacopy(a, 4, 32)
-      calldatacopy(b, add(4, 32), 32)
-      result := add(mload(a), mload(b))
+    assembly{
+      _a := mload(0x40)
+      _b := add(_a, 32)
+      calldatacopy(_a, 4, 32)
+      calldatacopy(_b, add(4, 32), 32)
+      result := add(mload(_a), mload(_b))
     }
   }
 }

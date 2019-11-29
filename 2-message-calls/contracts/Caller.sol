@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.11;
 
 import "./Implementation.sol";
 
@@ -7,13 +7,13 @@ contract Caller {
 
   Implementation public implementation;
 
-  function Caller() public {
+  constructor() public {
     implementation = new Implementation();
   }
 
-  function () public payable {
+  function() external payable {
     emit CallerLog(gasleft());
-    implementation.call.gas(gasleft()).value(msg.value)(msg.data);
+    address(implementation).call.gas(gasleft()).value(msg.value)(msg.data);
     emit CallerLog(gasleft());
   }
 }

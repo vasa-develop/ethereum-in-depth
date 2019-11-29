@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.11;
 
 import "./Implementation.sol";
 
@@ -7,14 +7,15 @@ contract Delegator {
 
   Implementation public implementation;
 
-  function Delegator() public {
+  constructor() public {
     implementation = new Implementation();
   }
 
-  function () public payable {
+  function() external payable {
     emit DelegatorLog(gasleft());
 
-    address _impl = implementation;
+    address _impl = address(implementation);
+    
     assembly {
       let ptr := mload(0x40)
       calldatacopy(ptr, 0, calldatasize)

@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.11;
 
 contract MyContract {
   event Log(address addr);

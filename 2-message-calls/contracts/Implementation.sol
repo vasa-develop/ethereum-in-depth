@@ -1,9 +1,9 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.11;
 
 contract Implementation {
   event ImplementationLog(uint256 gas);
 
-  function() public payable {
+  function() external payable {
     emit ImplementationLog(gasleft());
     assert(false);
   }
